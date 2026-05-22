@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { useMotionSupport } from "@/hooks/useMotionSupport";
-import { MagneticButton } from "@/components/shared/MagneticButton";
+import { Button } from "@/components/ui/button";
 import { letterReveal } from "@/lib/animations";
 
 const HEADLINE_LINE_ONE = "Paint protected";
@@ -73,14 +73,14 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <MagneticButton asChild size="lg">
+              <Button asChild size="lg">
                 <Link to="/booking">
                   Book a consultation <ArrowUpRight className="h-4 w-4" />
                 </Link>
-              </MagneticButton>
-              <MagneticButton asChild variant="outline" size="lg">
+              </Button>
+              <Button asChild variant="outline" size="lg">
                 <Link to="/services">View services</Link>
-              </MagneticButton>
+              </Button>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ function Eyebrow() {
     <div className="flex items-center gap-4">
       <span className="h-px w-10 bg-primary" />
       <span className="text-xs tracking-[0.32em] uppercase text-primary">
-        Atlanta · By appointment
+        San Jose · By appointment
       </span>
     </div>
   );

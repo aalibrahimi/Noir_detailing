@@ -4,7 +4,7 @@ import { CTA } from "@/components/sections/CTA";
 
 const team = [
   {
-    name: "Idris Kane",
+    name: "Sajad Alibrahimi",
     role: "Founder, Master Technician",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=85&auto=format&fit=crop",
     bio: "Twelve years in concours preparation. Formerly with a private collection in Geneva.",
@@ -53,10 +53,10 @@ export default function About() {
           <RevealOnScroll delay={2} className="lg:col-span-7 space-y-6 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p className="eyebrow text-primary">Origin · 2014</p>
             <p>
-              NOIR began in a single bay outside Atlanta. The intent was modest — to offer paint
+              NOIR began in a single bay in San Jose. The intent was modest — to offer paint
               correction at a standard that did not yet exist in the region. The first year saw
               forty cars. The second, sixty. By the fifth, we had moved into the current 4,800-square-foot
-              atelier on Beaumont Way.
+              atelier on Stockton Avenue.
             </p>
             <p>
               We have never advertised. The clientele is built entirely on referral, and the calendar
@@ -67,7 +67,7 @@ export default function About() {
             <p className="text-foreground font-serif text-xl italic tracking-tight">
               "The car is not the product. The relationship is."
             </p>
-            <p className="text-sm text-muted-foreground">— Idris Kane, founder</p>
+            <p className="text-sm text-muted-foreground">— Sajad Alibrahimi, founder</p>
           </RevealOnScroll>
         </div>
       </section>

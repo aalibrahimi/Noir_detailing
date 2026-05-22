@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Nav } from "@/components/shared/Nav";
 import { Footer } from "@/components/shared/Footer";
 import { Loader } from "@/components/shared/Loader";
-import { CustomCursor } from "@/components/shared/CustomCursor";
 import { ScrollToTop } from "@/components/shared/ScrollToTop";
 import { useMotionSupport } from "@/hooks/useMotionSupport";
 import Home from "@/pages/Home";
@@ -19,7 +18,6 @@ export default function App() {
   return (
     <div className="relative min-h-screen-safe bg-background text-foreground noise">
       <Loader />
-      <CustomCursor />
       <ScrollToTop />
       <Nav />
       <main id="main" className="relative">

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { RevealOnScroll } from "@/components/shared/RevealOnScroll";
-import { MagneticButton } from "@/components/shared/MagneticButton";
+import { Button } from "@/components/ui/button";
 
 interface CTAProps {
   eyebrow?: string;
@@ -22,7 +22,7 @@ export function CTA({
   primaryLabel = "Request a consultation",
   secondaryHref = "/contact",
   secondaryLabel = "Speak with the studio",
-  image = "https://images.unsplash.com/photo-1583836631365-3e0bf5092ff6?w=2000&q=90&auto=format&fit=crop",
+  image = "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=2000&q=90&auto=format&fit=crop",
 }: CTAProps) {
   return (
     <section className="relative isolate overflow-hidden" aria-label="Get in touch">
@@ -53,15 +53,15 @@ export function CTA({
             {body}
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
-            <MagneticButton asChild size="lg">
+            <Button asChild size="lg">
               <Link to={primaryHref}>
                 {primaryLabel}
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
-            </MagneticButton>
-            <MagneticButton asChild variant="outline" size="lg">
+            </Button>
+            <Button asChild variant="outline" size="lg">
               <Link to={secondaryHref}>{secondaryLabel}</Link>
-            </MagneticButton>
+            </Button>
           </div>
         </RevealOnScroll>
       </div>

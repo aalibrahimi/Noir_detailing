@@ -25,7 +25,7 @@ export const services: Service[] = [
       "A multi-layer 9H ceramic system, applied in a controlled environment after a full decontamination and refinement of the paint surface. The coating cures to a hydrophobic, UV-stable shell that protects against light marring, road salts, and oxidation.",
     duration: "2 — 3 days",
     image:
-      "https://images.unsplash.com/photo-1605618826115-fb9e0c93f6f3?w=1920&q=90&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1920&q=90&auto=format&fit=crop",
     tiers: [
       {
         name: "Signature",
@@ -120,7 +120,7 @@ export const services: Service[] = [
       "A panel-by-panel reset of every interior surface. Leathers are pH-cleaned and conditioned, fabrics are steam-extracted, and HVAC vents are flushed. Headliners receive a low-moisture clean to avoid sag.",
     duration: "1 day",
     image:
-      "https://images.unsplash.com/photo-1583836631365-3e0bf5092ff6?w=1920&q=90&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1503945438517-f65904a52ce6?w=1920&q=90&auto=format&fit=crop",
     tiers: [
       {
         name: "Refresh",
@@ -255,7 +255,7 @@ export const gallery: GalleryItem[] = [
     category: "Ceramic",
     vehicle: "Atelier coating, two-step correction",
     before:
-      "https://images.unsplash.com/photo-1611821064430-0d40291922d4?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600&q=85&auto=format&fit=crop",
     after:
       "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=85&auto=format&fit=crop",
     thumbnail:
@@ -267,11 +267,11 @@ export const gallery: GalleryItem[] = [
     category: "PPF",
     vehicle: "Full front, satin finish",
     before:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=1600&q=85&auto=format&fit=crop",
     after:
-      "https://images.unsplash.com/photo-1617814086367-c97d20cef9eb?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1600&q=85&auto=format&fit=crop",
     thumbnail:
-      "https://images.unsplash.com/photo-1617814086367-c97d20cef9eb?w=1200&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1200&q=85&auto=format&fit=crop",
   },
   {
     id: "f8",
@@ -279,11 +279,11 @@ export const gallery: GalleryItem[] = [
     category: "Correction",
     vehicle: "Three-step concours preparation",
     before:
-      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1600&q=85&auto=format&fit=crop",
     after:
-      "https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1600&q=85&auto=format&fit=crop",
     thumbnail:
-      "https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?w=1200&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1200&q=85&auto=format&fit=crop",
   },
   {
     id: "rolls",
@@ -291,7 +291,7 @@ export const gallery: GalleryItem[] = [
     category: "Interior",
     vehicle: "Full interior restoration",
     before:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1600&q=85&auto=format&fit=crop",
     after:
       "https://images.unsplash.com/photo-1542362567-b07e54358753?w=1600&q=85&auto=format&fit=crop",
     thumbnail:
@@ -315,11 +315,11 @@ export const gallery: GalleryItem[] = [
     category: "PPF",
     vehicle: "Full body, gloss finish",
     before:
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=85&auto=format&fit=crop",
     after:
-      "https://images.unsplash.com/photo-1614026480418-bd11fde31f12?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600&q=85&auto=format&fit=crop",
     thumbnail:
-      "https://images.unsplash.com/photo-1614026480418-bd11fde31f12?w=1200&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200&q=85&auto=format&fit=crop",
   },
   {
     id: "lambo",
@@ -327,11 +327,11 @@ export const gallery: GalleryItem[] = [
     category: "Correction",
     vehicle: "Two-step paint refinement",
     before:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=1600&q=85&auto=format&fit=crop",
     after:
-      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?w=1600&q=85&auto=format&fit=crop",
     thumbnail:
-      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1200&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?w=1200&q=85&auto=format&fit=crop",
   },
   {
     id: "bentley",
@@ -339,11 +339,11 @@ export const gallery: GalleryItem[] = [
     category: "Ceramic",
     vehicle: "Atelier coating with glass",
     before:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=85&auto=format&fit=crop",
     after:
-      "https://images.unsplash.com/photo-1605618826115-fb9e0c93f6f3?w=1600&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1493238792000-8113da705763?w=1600&q=85&auto=format&fit=crop",
     thumbnail:
-      "https://images.unsplash.com/photo-1605618826115-fb9e0c93f6f3?w=1200&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1493238792000-8113da705763?w=1200&q=85&auto=format&fit=crop",
   },
 ];
 
@@ -399,8 +399,8 @@ export const studio = {
   brandName: "NOIR",
   brandSuffix: "Detailing House",
   tagline: "A private atelier for ceramic, correction, and protection film.",
-  address: "1408 Beaumont Way, Suite 200",
-  city: "Atlanta, GA 30318",
+  address: "1408 Stockton Avenue, Suite 200",
+  city: "San Jose, CA 95126",
   phone: "+1 (404) 555-0182",
   email: "atelier@noirdetailinghouse.com",
   hours: [
@@ -411,5 +411,4 @@ export const studio = {
   social: {
     instagram: "noir.detailing",
     youtube: "@noirdetailing",
-  },
-};
+  },};

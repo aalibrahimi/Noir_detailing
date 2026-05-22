@@ -63,6 +63,27 @@
     overflow-x: hidden;
   }
 
+  /* Golden cursor — applied on desktop only. Falls back to system default. */
+  @media (hover: hover) and (pointer: fine) {
+    body {
+      cursor: url("/cursor.svg") 2 2, default;
+    }
+    a,
+    button,
+    [role="button"],
+    label[for],
+    summary {
+      cursor: url("/cursor-pointer.svg") 8 4, pointer;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      cursor: text;
+    }
+  }
+
   /* Selection */
   ::selection {
     background-color: hsl(var(--primary) / 0.25);
@@ -202,21 +223,6 @@
     content: "";
     position: absolute;
     inset: 0;
-    pointer-events: none;
     background: radial-gradient(ellipse at center, transparent 50%, hsl(var(--background) / 0.6) 100%);
-  }
-}
-
-/* Hide native cursor when custom cursor is active (desktop only) */
-@media (hover: hover) and (pointer: fine) {
-  body[data-custom-cursor="true"] {
-    cursor: none;
-  }
-  body[data-custom-cursor="true"] a,
-  body[data-custom-cursor="true"] button,
-  body[data-custom-cursor="true"] input,
-  body[data-custom-cursor="true"] textarea,
-  body[data-custom-cursor="true"] [role="button"] {
-    cursor: none;
   }
 }
