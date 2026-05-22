@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { RevealOnScroll } from "@/components/shared/RevealOnScroll";
+import { GoldDraw } from "@/components/shared/GoldDraw";
 import { services } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -9,7 +10,10 @@ export function ServicesPreview() {
     <section className="container-edge py-24 lg:py-40" aria-label="Services">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 mb-20">
         <RevealOnScroll className="lg:col-span-5">
-          <p className="eyebrow mb-4">Services</p>
+          <div className="flex items-center gap-4 mb-4">
+            <GoldDraw width={32} />
+            <p className="eyebrow !text-primary !tracking-[0.3em]">Services</p>
+          </div>
           <h2 className="font-serif text-display-xl text-foreground">
             Six disciplines.
             <span className="block text-muted-foreground italic">One standard.</span>

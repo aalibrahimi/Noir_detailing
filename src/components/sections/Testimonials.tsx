@@ -1,5 +1,6 @@
 import { Quote } from "lucide-react";
 import { RevealOnScroll } from "@/components/shared/RevealOnScroll";
+import { GoldDraw } from "@/components/shared/GoldDraw";
 import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
 import { testimonials } from "@/lib/data";
 
@@ -13,7 +14,6 @@ const stats = [
 export function Testimonials() {
   return (
     <section className="container-edge py-24 lg:py-40" aria-label="Client testimonials">
-      {/* Stat row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border rounded-lg overflow-hidden mb-24">
         {stats.map((s, i) => (
           <RevealOnScroll
@@ -31,10 +31,12 @@ export function Testimonials() {
         ))}
       </div>
 
-      {/* Quotes */}
       <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
         <RevealOnScroll className="lg:col-span-4">
-          <p className="eyebrow mb-4">Voices</p>
+          <div className="flex items-center gap-4 mb-4">
+            <GoldDraw width={32} />
+            <p className="eyebrow !text-primary !tracking-[0.3em]">Voices</p>
+          </div>
           <h2 className="font-serif text-display-lg text-foreground">
             Quietly spoken,
             <span className="block italic text-muted-foreground">often returned.</span>

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { RevealOnScroll } from "@/components/shared/RevealOnScroll";
+import { GoldDraw } from "@/components/shared/GoldDraw";
 import { BeforeAfter } from "@/components/shared/BeforeAfter";
 import { gallery } from "@/lib/data";
 
 export function GalleryTeaser() {
-  // Feature the first three gallery items; first one uses the BA slider.
   const featured = gallery.slice(0, 3);
 
   return (
@@ -13,7 +13,10 @@ export function GalleryTeaser() {
       <div className="container-edge">
         <div className="flex items-end justify-between mb-16 gap-10">
           <RevealOnScroll>
-            <p className="eyebrow mb-4">Recent work</p>
+            <div className="flex items-center gap-4 mb-4">
+              <GoldDraw width={32} />
+              <p className="eyebrow !text-primary !tracking-[0.3em]">Recent work</p>
+            </div>
             <h2 className="font-serif text-display-xl text-foreground max-w-3xl">
               Before, after,
               <span className="italic text-muted-foreground"> rarely between.</span>

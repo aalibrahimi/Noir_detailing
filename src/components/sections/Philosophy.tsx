@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "@/components/shared/RevealOnScroll";
+import { GoldDraw } from "@/components/shared/GoldDraw";
 
 const principles = [
   {
@@ -26,7 +27,10 @@ export function Philosophy() {
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
           <RevealOnScroll className="lg:col-span-5">
             <div className="lg:sticky lg:top-32">
-              <p className="eyebrow mb-4">Philosophy</p>
+              <div className="flex items-center gap-4 mb-4">
+                <GoldDraw width={32} />
+                <p className="eyebrow !text-primary !tracking-[0.3em]">Philosophy</p>
+              </div>
               <h2 className="font-serif text-display-xl text-foreground">
                 We refine.
                 <span className="block italic text-muted-foreground">We do not rush.</span>
