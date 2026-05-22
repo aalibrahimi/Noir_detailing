@@ -122,12 +122,7 @@ export default function Gallery() {
                 <DialogTitle>{open.title}</DialogTitle>
                 <DialogDescription>{open.vehicle}</DialogDescription>
               </div>
-              <BeforeAfter
-                before={open.before}
-                after={open.after}
-                beforeAlt={`${open.title} before ${open.category.toLowerCase()}`}
-                afterAlt={`${open.title} after ${open.category.toLowerCase()}`}
-              />
+              <BeforeAfter image={open.after} alt={open.title} />
             </div>
           )}
         </DialogContent>

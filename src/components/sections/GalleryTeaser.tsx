@@ -33,10 +33,8 @@ export function GalleryTeaser() {
         <div className="grid gap-6 lg:gap-8 lg:grid-cols-12">
           <RevealOnScroll className="lg:col-span-8">
             <BeforeAfter
-              before={featured[0].before}
-              after={featured[0].after}
-              beforeAlt={`${featured[0].title} before paint correction`}
-              afterAlt={`${featured[0].title} after paint correction`}
+              image={featured[0].after}
+              alt={featured[0].title}
               className="aspect-[16/10]"
             />
             <div className="mt-4 flex items-center justify-between text-sm">

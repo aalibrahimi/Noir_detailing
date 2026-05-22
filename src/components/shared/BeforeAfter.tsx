@@ -2,15 +2,20 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface BeforeAfterProps {
-  before: string;
-  after: string;
-  beforeAlt: string;
-  afterAlt: string;
+  /** Single image. Same source is shown on both halves — the "before" half
+      receives a CSS treatment that simulates an unpolished surface. */
+  image: string;
+  alt: string;
   className?: string;
 }
 
-/** Draggable before/after image slider with keyboard support. Pure CSS — no Framer. */
-export function BeforeAfter({ before, after, beforeAlt, afterAlt, className }: BeforeAfterProps) {
+/**
+ * Draggable before/after slider. Both halves render the SAME source image —
+ * the left half gets desaturate/dim/blur + a dusty overlay to read as the
+ * pre-detail state. This is honest about being a visual simulation; in
+ * production each gallery item would carry an actual before photograph.
+ */
+export function BeforeAfter({ image, alt, className }: BeforeAfterProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50);
   const dragging = useRef(false);
@@ -61,23 +66,46 @@ export function BeforeAfter({ before, after, beforeAlt, afterAlt, className }: B
       )}
       style={{ aspectRatio: "16 / 10" }}
     >
+      {/* AFTER — the true polished image, on the right */}
       <img
-        src={after}
-        alt={afterAlt}
+        src={image}
+        alt={`${alt} — after detail`}
         loading="lazy"
         decoding="async"
         className="absolute inset-0 h-full w-full object-cover gpu"
       />
+
+      {/* BEFORE — same image, clipped to the left of the handle, with
+          desaturate + dim filter and a dust/haze overlay on top */}
       <div
         className="absolute inset-0 overflow-hidden gpu"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        aria-hidden="true"
       >
         <img
-          src={before}
-          alt={beforeAlt}
+          src={image}
+          alt=""
           loading="lazy"
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
+          style={{
+            filter: "saturate(0.35) brightness(0.72) contrast(0.88) blur(0.4px)",
+          }}
+        />
+        {/* Dust / haze overlay — warm grey wash + subtle vignette */}
+        <div
+          className="absolute inset-0 mix-blend-multiply"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(120,110,95,0.35) 0%, rgba(80,75,68,0.28) 60%, rgba(40,38,35,0.32) 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-25 mix-blend-overlay"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
+          }}
         />
       </div>
 
