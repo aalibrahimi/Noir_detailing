@@ -1,0 +1,144 @@
+/* CSS-only animation fallbacks used when Framer Motion is unavailable or disabled.
+   These mirror the Framer Motion intents 1:1 so layouts remain consistent. */
+
+@keyframes safe-fade-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes safe-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes safe-scale-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes safe-letter-reveal {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes safe-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes safe-pulse-ring {
+  0% {
+    opacity: 0.6;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(2);
+  }
+}
+
+@keyframes safe-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes safe-spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility classes apply the keyframes. They engage GPU compositing on Safari. */
+.fb-fade-up {
+  opacity: 0;
+  animation: safe-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+.fb-fade-in {
+  opacity: 0;
+  animation: safe-fade-in 0.6s ease-out forwards;
+}
+
+.fb-scale-in {
+  opacity: 0;
+  animation: safe-scale-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fb-marquee {
+  animation: safe-marquee 40s linear infinite;
+}
+
+.fb-spin-slow {
+  animation: safe-spin-slow 18s linear infinite;
+}
+
+/* Stagger via delay multipliers — keep small for layout safety */
+.fb-delay-1 { animation-delay: 0.08s; }
+.fb-delay-2 { animation-delay: 0.16s; }
+.fb-delay-3 { animation-delay: 0.24s; }
+.fb-delay-4 { animation-delay: 0.32s; }
+.fb-delay-5 { animation-delay: 0.4s; }
+.fb-delay-6 { animation-delay: 0.48s; }
+
+/* Honor user preference universally */
+@media (prefers-reduced-motion: reduce) {
+  .fb-fade-up,
+  .fb-fade-in,
+  .fb-scale-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .fb-marquee,
+  .fb-spin-slow {
+    animation: none !important;
+  }
+}
+
+/* Before/After slider handle pulse — pure CSS, no Framer */
+@keyframes ba-handle-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+  }
+}
+
+.ba-handle-pulse {
+  animation: ba-handle-pulse 2.4s ease-out infinite;
+}
