@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { useMotionSupport } from "@/hooks/useMotionSupport";
 import { Button } from "@/components/ui/button";
+import { GoldDraw } from "@/components/shared/GoldDraw";
 import { letterReveal } from "@/lib/animations";
 
 const HEADLINE_LINE_ONE = "Paint protected";
@@ -65,6 +66,9 @@ export function Hero() {
               <HeadlineLine text={HEADLINE_LINE_TWO} startIndex={HEADLINE_LINE_ONE.length} />
             </span>
           </h1>
+
+          {/* Gold hairline that draws in after the headline letter reveal */}
+          <GoldDraw width={180} delay={1.4} immediate className="mt-8" />
 
           <div className="mt-10 lg:mt-14 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <p className="max-w-xl text-base lg:text-lg text-muted-foreground leading-relaxed">
